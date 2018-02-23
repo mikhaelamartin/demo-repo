@@ -1,0 +1,98 @@
+---
+title: "Lab03"
+author: "Mikee Alfeche"
+date: "February 6, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+``` {Optional Practice}
+
+# If you are already familiar with the basic bash commands to navigate the filesystem (or if you want to expand your R skills), use the R functions to manipulate files and directories to perform the exact same tasks from within R. See ?files for more information.
+
+# TYPE IN CONSOLE
+# #download RData file into your working directory
+# rm(list = ls())
+# rdata <- "https://github.com/ucb-stat133/stat133-fall-2017/raw/master/data/nba2017-salary-points.RData"
+#  download.file(url = rdata, destfile = "C:/Users/m2mar/Google Drive/Berkeley/Sophomore/Statistics 133/nba2017-salary-points.RData")
+
+
+load("C:/Users/m2mar/Google Drive/Berkeley/Sophomore/Statistics 133/Git/Stat133-lab03")
+ls()
+```
+
+``` {challenge}
+# getwd()
+# setwd()
+# download.file()
+# dir.create()
+# list.files()
+# list.dirs()
+# file.create()
+# file.copy()
+# file.rename()
+# file.remove()
+
+# Use mkdir to create a new directory stat133-lab03
+file.create(stat133-lab03)
+
+# Change to the directory stat133-lab03
+# 
+# TXT FILES
+download.file("http://textfiles.com/food/bread.txt", "http://textfiles.com/food/btaco.txt", "http://textfiles.com/food/1st_aid.txt")
+# CSV FILES
+download.file("http://archive.ics.uci.edu/ml/machine-learning-databases/forest-fires/forestfires.csv", "http://www.math.uah.edu/stat/data/Fisher.csv", "http://web.pdx.edu/~gerbing/data/cars.csv")
+list.files()
+rev(list.files())
+
+# Now try ls -l to list the contents in your current directory in long format
+# 
+# Look at the man documentation of ls to find out how to list the contents in reverse order
+# 
+# How would you list the contents in long format and by time?
+# 
+# Inside stat133-lab03 create a directory data
+# 
+# Change to the directory data
+# 
+# Create a directory txt-files
+# 
+# Create a directory csv-files
+# 
+# Use the command mv to move the bread.txt file to the folder txt-files
+# 
+# Use the wildcard * to move all the text files to the directory txt-files
+# 
+# Use the wildcard * to move all the .csv files to the directory csv-files
+# 
+# Go back to the parent directory stat133-lab03
+# 
+# Create a directory copies
+# 
+# Use the command cp to copy the bread.txt file (the one inside the folder txt-files) to the copies directory
+# 
+# Use the wildcard * to copy all the .txt files in the directory copies
+# 
+# Use the wildcard * to copy all the .csv files in the directory copies
+# 
+# Change to the directory copies
+# 
+# Use the command mv to rename the file bread.txt as bread-recipe.txt
+# 
+# Rename the file Fisher.csv as iris.csv
+# 
+# Rename the file btaco.txt as breakfast-taco.txt
+# 
+# Change to the parent directory (i.e. stat133-lab03)
+# 
+# Rename the directory copies as copy-files
+# 
+# Find out how to use the rm command to delete the directory copy-files
+# 
+# List the contents of the directory txt-files displaying the results in reverse (alphabetical) order
+```
